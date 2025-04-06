@@ -12,7 +12,7 @@ if (_left) { xv -= spd + (g.kart_speed * 0.25); }
 if (_right) { xv += spd + (g.kart_speed * 0.25); }
 
 xv /= fric;
-xv = clamp(xv, -max_spd - (g.kart_speed * 1.5), max_spd + (g.kart_speed * 1.5));
+xv = clamp(xv, -max_spd - (g.kart_speed * 1.7), max_spd + (g.kart_speed * 1.7));
 
 x += xv;
 
