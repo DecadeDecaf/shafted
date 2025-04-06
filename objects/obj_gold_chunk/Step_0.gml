@@ -2,6 +2,7 @@ if (position_meeting(x, y, obj_minecart) && !caught) {
 	g.gold++;
 	if (g.gold > 75) { g.gold = 75; }
 	caught = true;
+	audio_play_sound(sfx_collect, 1, false, 0.8, 0, random_range(0.9, 1.1));
 }
 
 x += xv;

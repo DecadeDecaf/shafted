@@ -27,13 +27,20 @@ if (_shoot) {
 	if (g.pickaxes > 0) {
 		instance_create_depth(x, y - 144, depth - 1, obj_pickaxe);
 		g.pickaxes--;
+		audio_play_sound(sfx_throw, 1, false, 0.8, 0, random_range(0.9, 1.1));
 	} else if (g.dynamite > 0) {
 		instance_create_depth(x, y - 144, depth - 1, obj_dynamite);
 		g.dynamite--;
+		audio_play_sound(sfx_throw, 1, false, 0.8, 0, random_range(0.9, 1.1));
 	}
 }
 
+if (!audio_is_playing(sfx_brakes)) {
+	audio_play_sound(sfx_brakes, 1, true);
+}
+
 if (xv < -2.5 && g.shaftspeed > 4) {
+	audio_sound_gain(sfx_brakes, 0.75, 16);
 	if (g.gfc % 3 == 0) {
 		var _xx = x - 52;
 		repeat (2) {
@@ -50,6 +57,8 @@ if (xv < -2.5 && g.shaftspeed > 4) {
 			}
 		}
 	}
+} else {
+	audio_sound_gain(sfx_brakes, 0, 2);
 }
 
 if (g.gfc % 20 == 0 && g.dead) {

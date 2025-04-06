@@ -1,6 +1,7 @@
 if (spd > 0 && position_meeting(x, y, obj_minecart) && !caught) {
 	g.dynamite++;
 	caught = true;
+	audio_play_sound(sfx_collect, 1, false, 0.8, 0, random_range(0.9, 1.1));
 }
 
 if (delay > 0) {

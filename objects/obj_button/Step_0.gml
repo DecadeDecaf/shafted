@@ -4,6 +4,7 @@ if (position_meeting(mouse_x, mouse_y, id) && image_index != 5) {
 	if (image_xscale > 1) { image_xscale = 1; }
 	if (image_yscale > 1) { image_yscale = 1; }
 	if (mouse_check_button_pressed(mb_left) && g.gold >= cost) {
+		if (cost > 0) { audio_play_sound(sfx_purchase, 1, false); }
 		g.gold -= cost;
 		cost = 0;
 		switch (image_index) {

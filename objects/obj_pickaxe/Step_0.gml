@@ -1,6 +1,7 @@
 if (spd > 0 && position_meeting(x, y, obj_minecart) && !caught) {
 	g.pickaxes++;
 	caught = true;
+	audio_play_sound(sfx_collect, 1, false, 0.8, 0, random_range(0.9, 1.1));
 }
 
 if (delay > 0) {
@@ -40,6 +41,7 @@ if (instance_exists(_vein)) {
 			_vein.hp--;
 			_vein.gold_left--;
 			instance_create_depth(x, y, depth, obj_gold_chunk);
+			audio_play_sound(sfx_mine, 1, false, 0.8, 0, random_range(0.9, 1.1));
 			delay = 10;
 			if (spd > 1.5) {
 				spd = -spd;
