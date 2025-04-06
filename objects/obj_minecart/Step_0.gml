@@ -2,7 +2,7 @@ var _left = (keyboard_check(vk_left));
 var _right = (keyboard_check(vk_right));
 var _shoot = (keyboard_check_pressed(vk_space));
 
-if (g.dead) {
+if (g.dead || g.won) {
 	_left = false;
 	_right = false;
 	_shoot = false;
@@ -50,4 +50,8 @@ if (xv < -2.5 && g.shaftspeed > 4) {
 			}
 		}
 	}
+}
+
+if (g.gfc % 20 == 0 && g.dead) {
+	instance_create_depth(x + random_range(-64, 64), y + random_range(-128, -32), depth - 11, obj_explosion);
 }

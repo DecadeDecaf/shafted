@@ -3,6 +3,7 @@
 
 g.gfc = 0;
 
+g.won = false;
 g.dead = false;
 g.gold = 0;
 

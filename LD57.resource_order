@@ -16,6 +16,8 @@
     {"name":"obj_boss","order":11,"path":"objects/obj_boss/obj_boss.yy",},
     {"name":"obj_gold_vein","order":6,"path":"objects/obj_gold_vein/obj_gold_vein.yy",},
     {"name":"spr_button","order":7,"path":"sprites/spr_button/spr_button.yy",},
+    {"name":"obj_confetti","order":13,"path":"objects/obj_confetti/obj_confetti.yy",},
+    {"name":"spr_confetti","order":12,"path":"sprites/spr_confetti/spr_confetti.yy",},
     {"name":"spr_pickaxe","order":3,"path":"sprites/spr_pickaxe/spr_pickaxe.yy",},
     {"name":"obj_contract","order":12,"path":"objects/obj_contract/obj_contract.yy",},
     {"name":"spr_boss","order":10,"path":"sprites/spr_boss/spr_boss.yy",},

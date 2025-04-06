@@ -55,13 +55,15 @@ var _boss = instance_nearest(x, y, obj_boss);
 
 if (instance_exists(_boss)) {
 	if (position_meeting(x, y, _boss) && _boss.hp > 0) {
-		repeat (min(_boss.hp, 5)) {
-			_boss.hp--;
+		if (spd > 1.5) {
+			repeat (min(_boss.hp, 5)) {
+				_boss.hp--;
+			}
+			_boss.recovery = 12;
+			instance_create_depth(x, y, depth - 11, obj_explosion);
+			instance_destroy();
+			exit;
 		}
-		_boss.recovery = 12;
-		instance_create_depth(x, y, depth - 11, obj_explosion);
-		instance_destroy();
-		exit;
 	}
 }
 

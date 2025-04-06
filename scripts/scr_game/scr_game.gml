@@ -7,7 +7,7 @@ function generate_mineshaft() {
 		instance_create_depth(_track_x, _track_y, 10, obj_mineshaft);
 		repeat (1 + floor(_i / 3)) {
 			if (random(10) < 6 && _i > 0) {
-				var _vein_x = _track_x + random_range(-320, 320);
+				var _vein_x = _track_x + random_range(-420, 420);
 				var _vein_y = 540 + random_range(-192, 160);
 				var _vein = instance_create_depth(_vein_x + 10000, _vein_y, -1, obj_gold_vein);
 				with (_vein) {

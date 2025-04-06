@@ -4,6 +4,11 @@ var _right = (image_xscale > 0);
 if (hp <= 0) {
 	_left = false;
 	_right = false;
+	if (!g.won) {
+		g.won = true;
+		g.dead = false;
+		instance_destroy(obj_button);
+	}
 	if (g.gfc % 20 == 0) {
 		instance_create_depth(x + random_range(-96, 96), y + random_range(-240, -48), depth - 11, obj_explosion);
 	}
