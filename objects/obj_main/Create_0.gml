@@ -7,10 +7,10 @@ g.won = false;
 g.dead = false;
 g.gold = 0;
 
-g.tracklength = 15//6;
-g.max_pickaxes = 6//1;
-g.max_dynamite = 3//0;
-g.kart_speed = 3//0;
+g.tracklength = 6;
+g.max_pickaxes = 1;
+g.max_dynamite = 0;
+g.kart_speed = 0;
 
 g.pickaxes = g.max_pickaxes;
 g.dynamite = g.max_dynamite;
