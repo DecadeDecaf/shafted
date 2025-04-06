@@ -22,7 +22,7 @@ function generate_mineshaft() {
 	}
 	var _end = instance_create_depth(_track_x + _track_w, _track_y, 0, obj_mineshaft);
 	_end.track_end = true;
-	_end.image_index = (g.tracklength < 15 ? 1 : 2);
+	_end.image_index = (g.tracklength < 12 ? 1 : 2);
 }
 
 function reset_track() {
